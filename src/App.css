@@ -1,3 +1,47 @@
 .App {
   text-align: center;
+  background: black;
+}
+
+header {
+  background-color: black;
+  z-index: 1;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  border-bottom: 10px solid #f2e900;
+  width: 100vw;
+  position: fixed;
+  font-size: xx-large;
+  color: #00ff9f;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.homepage {
+  background-color: rgb(200, 139, 139);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(30, 144, 30);
+}
+
+.login-button {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.logout-button {
+  position: absolute;
+  top: 85px;
+  right: 65px;
+}
+
+.search-bar {
+  position: top;
+  top: 160px;
+  right: 50px;
 }
