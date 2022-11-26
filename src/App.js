@@ -15,16 +15,17 @@ function App() {
   return (
     <main className="App">
       <Header />
-      <div className="homepage">
+      <div>
         {!user ? (
           <Login setUser={setUser} />
         ) : (
           <>
-            <div className="navigation">
-              <SearchBar />
+            <div>
               <Logout setUser={setUser} />
+              <br />
+              <Homepage />
+              <SearchBar />
             </div>
-            <Homepage />
             <br />
             <ToWatch />
             <InProgress />

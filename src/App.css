@@ -1,14 +1,25 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 .App {
   text-align: center;
-  background: black;
+  background-color: rgb(200, 139, 193);
+  min-height: 120vh;
+  font-size: calc(10px + 2vmin);
 }
 
 header {
   background-color: black;
   z-index: 1;
-  padding: 0.5em;
+  padding: 0.75em;
   display: flex;
   justify-content: center;
+  text-align: center;
   border-bottom: 10px solid #f2e900;
   width: 100vw;
   font-size: xx-large;
@@ -16,43 +27,48 @@ header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.homepage {
-  background-color: rgb(200, 139, 193);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  color: rgb(30, 70, 144);
-}
-
 .login-button {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-/* .logout-button {
-  position: absolute;
-  top: 85px;
-  right: 65px;
+.logout-button {
+  /* display: flex;
+  justify-content: flex-end; */
+  border: 4px solid purple;
+  margin: 20px;
+  padding: 20px;
+}
+
+.search-text {
+  border: 4px solid navy;
+  margin: 20px;
+  padding: 20px;
 }
 
 .search-bar {
-  display: flex;
-  top: 160px;
-  right: 50px;
-} */
-
-.navigation {
-  display: flex;
-  position: relative;
-  justify-content: right;
-  flex-wrap: wrap;
+  border: 4px solid slategray;
+  width: 80vw;
+  margin: 20px;
+  padding: 20px;
 }
 
 .drop-down {
   display: flex;
-  position: relative;
   justify-content: center;
-  font-size: 40px;
+  border: 4px solid crimson;
+  margin: 20px;
+  padding: 20px;
+}
+
+.homepage-text {
+  /* display: flex; */
+  /* position: relative; */
+  border: 4px solid darkorange;
+  margin: 20px;
+  padding: 20px;
+}
+
+.dropdown-title {
+  font-size: xx-large;
 }

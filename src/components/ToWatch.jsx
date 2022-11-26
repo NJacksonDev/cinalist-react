@@ -29,7 +29,7 @@ export default function ToWatch() {
         }}
       >
         <a onClick={(e) => e.preventDefault()}>
-          <Space>
+          <Space className="dropdown-title">
             To Watch
             <DownOutlined />
           </Space>

@@ -6,7 +6,7 @@ export default function SearchBar() {
   const [searchInput, setSearchInput] = useState("");
   return (
     <div>
-      Search for a movie below.
+      <div className="search-text">Search for a movie below.</div>
       <Search
         placeholder="input search text"
         enterButton="Search"

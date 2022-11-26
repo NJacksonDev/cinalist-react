@@ -29,7 +29,7 @@ export default function InProgress() {
         }}
       >
         <a onClick={(e) => e.preventDefault()}>
-          <Space>
+          <Space className="dropdown-title">
             In progress
             <DownOutlined />
           </Space>
