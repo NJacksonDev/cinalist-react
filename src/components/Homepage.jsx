@@ -1,3 +1,8 @@
 export default function Homepage() {
-  return <div>This is the homepage</div>;
+  return (
+    <div>
+      Create your own curated movie collection organized into three categories:
+      Watched, In Progress and To Watch
+    </div>
+  );
 }
