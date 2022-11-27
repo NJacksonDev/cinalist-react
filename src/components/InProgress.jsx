@@ -1,6 +1,30 @@
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, message, Space } from "antd";
-import ListModal from "./Modal.jsx";
+import { Button, Modal } from "antd";
+import { useState } from "react";
+
+export function ListModal() {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <Button type="primary" onClick={() => setOpen(true)}>
+        Open Modal of 1000px width
+      </Button>
+      <Modal
+        title="Modal 1000px width"
+        centered
+        open={open}
+        onOk={() => setOpen(false)}
+        onCancel={() => setOpen(false)}
+        width={1000}
+      >
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+      </Modal>
+    </>
+  );
+}
 
 const onClick = ({ key }) => {
   message.info(`Click on item ${key}`);
@@ -20,7 +44,7 @@ const items = [
   },
 ];
 
-export default function InProgress() {
+export function InProgress() {
   return (
     <div className="drop-down">
       <Dropdown
@@ -36,6 +60,7 @@ export default function InProgress() {
           </Space>
         </a>
       </Dropdown>
+      <ListModal />
     </div>
   );
 }

@@ -2,15 +2,15 @@ import "./App.css";
 import { useState } from "react";
 import Login from "./components/Login";
 import Header from "./components/Header";
-import Homepage from "./components/Homepage";
+import Cards from "./components/Cards";
 import Logout from "./components/Logout";
 import SearchBar from "./components/Search";
 import ToWatch from "./components/ToWatch";
-import InProgress from "./components/InProgress";
+import { InProgress } from "./components/InProgress";
 import Watched from "./components/Watched";
 import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
   const [user, setUser] = useState();
 
   return (
@@ -21,16 +21,14 @@ function App() {
           <Login setUser={setUser} />
         ) : (
           <>
-            <div>
-              <Logout setUser={setUser} />
-              <br />
-              <Homepage />
-              <SearchBar />
-            </div>
+            <Logout setUser={setUser} />
             <br />
+            <SearchBar />
             <ToWatch />
             <InProgress />
             <Watched />
+            <br />
+            <Cards />
             <Footer />
           </>
         )}
@@ -38,5 +36,3 @@ function App() {
     </main>
   );
 }
-
-export default App;

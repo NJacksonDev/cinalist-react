@@ -87,7 +87,42 @@ footer {
   display: flex;
   justify-content: center;
   margin: 20px;
+  margin-top: 50px;
   padding: 20px;
   border: 4px solid brown;
   font-size: small;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 4px solid purple;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px;
+  border: 4px solid whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-color: cadetblue;
+  width: 36%;
+  height: 18em;
+}
+
+img {
+  width: 65%;
+  height: fit-content;
+}
+
+@media only screen and (max-width: 821px) {
+  .card-container {
+    width: 70%;
+  }
 }
