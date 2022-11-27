@@ -1,7 +1,3 @@
 export default function Header() {
-  return (
-    <>
-      <header className="header">CinaList</header>
-    </>
-  );
+  return <header className="header">CinaList</header>;
 }

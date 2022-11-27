@@ -8,12 +8,13 @@ import SearchBar from "./components/Search";
 import ToWatch from "./components/ToWatch";
 import InProgress from "./components/InProgress";
 import Watched from "./components/Watched";
+import Footer from "./components/Footer";
 
 function App() {
   const [user, setUser] = useState();
 
   return (
-    <main className="App">
+    <main className="main-flex-container">
       <Header />
       <div>
         {!user ? (
@@ -30,6 +31,7 @@ function App() {
             <ToWatch />
             <InProgress />
             <Watched />
+            <Footer />
           </>
         )}
       </div>

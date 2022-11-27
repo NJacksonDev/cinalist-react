@@ -1,5 +1,6 @@
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, message, Space } from "antd";
+import ListModal from "./Modal.jsx";
 
 const onClick = ({ key }) => {
   message.info(`Click on item ${key}`);
@@ -28,7 +29,7 @@ export default function InProgress() {
           onClick,
         }}
       >
-        <a onClick={(e) => e.preventDefault()}>
+        <a onClick={(e) => e.preventDefault}>
           <Space className="dropdown-title">
             In progress
             <DownOutlined />
