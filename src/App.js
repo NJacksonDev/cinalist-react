@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import Header from "./components/Header";
 import Cards from "./components/Cards";
 import Logout from "./components/Logout";
-import SearchBar from "./components/Search";
+import SearchBar from "./components/SearchBar";
 import ToWatch from "./components/ToWatch";
 import { InProgress } from "./components/InProgress";
 import Watched from "./components/Watched";
