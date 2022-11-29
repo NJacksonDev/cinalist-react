@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Header from "./components/Header";
 import Cards from "./components/Cards";
 import Logout from "./components/Logout";
+import GoogleAvatar from "./components/GoogleAvatar";
 import SearchBar from "./components/SearchBar";
 import ToWatch from "./components/ToWatch";
 import { InProgress } from "./components/InProgress";
@@ -22,6 +23,7 @@ export default function App() {
         ) : (
           <>
             <Logout setUser={setUser} />
+            <GoogleAvatar user={user} />
             <br />
             <SearchBar />
             <ToWatch />

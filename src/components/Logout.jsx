@@ -6,7 +6,7 @@ export default function Logout({ setUser }) {
       onClick={() => setUser(null)}
       type="primary"
       size="large"
-      className="logout-button"
+      className="avatar"
     >
       Logout
     </Button>
