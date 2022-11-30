@@ -1,26 +1,30 @@
-import { Avatar, Button, List, Skeleton } from "antd";
+import { Avatar, Button, List } from "antd";
 
 export default function SearchList({ input }) {
   return (
     <List
-      className="demo-loadmore-list"
+      className="search-list"
       itemLayout="horizontal"
       dataSource={input}
       renderItem={(item) => (
         <List.Item
           actions={[
-            <a key="list-loadmore-edit">edit</a>,
-            <a key="list-loadmore-more">more</a>,
+            <Button type="primary" size="small">
+              Add to: Watched
+            </Button>,
+            <Button type="primary" size="small">
+              Add to: In Progress
+            </Button>,
+            <Button type="primary" size="small">
+              Add to: To Watch
+            </Button>,
           ]}
         >
           <List.Item.Meta
-            avatar={<Avatar src={item.poster} />}
-            title={<a href="https://ant.design">{item.title}</a>}
+            avatar={<Avatar src={item.poster} size={110} />}
+            title={<h3 href="https://ant.design">{item.title}</h3>}
             description={item.year}
           />
-          {/* <Skeleton avatar title={false} loading={item.loading} active>
-            <div>content</div>
-          </Skeleton> */}
         </List.Item>
       )}
     />
