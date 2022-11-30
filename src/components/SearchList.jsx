@@ -21,7 +21,7 @@ export default function SearchList({ input }) {
           ]}
         >
           <List.Item.Meta
-            avatar={<Avatar src={item.poster} size={110} />}
+            avatar={<Avatar src={item.poster} size={110} shape="square" />}
             title={<h3 href="https://ant.design">{item.title}</h3>}
             description={item.year}
           />

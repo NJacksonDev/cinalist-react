@@ -133,6 +133,5 @@ img {
   margin-top: 50px;
   padding: 20px;
   border: 4px solid gray;
-  align-items: flex-end;
   justify-content: flex-end;
 }
