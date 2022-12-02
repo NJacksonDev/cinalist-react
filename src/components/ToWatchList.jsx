@@ -1,44 +1,34 @@
 import { Avatar, Button, List } from "antd";
 
-export default function SearchList({ searchResults, user }) {
-  const handleAddMovie = (item, status) => {
-    fetch(`http://localhost:5002/usersavedmovies`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ...item, status: status, uid: user.uid }),
-    });
-  };
-
+export default function ToWatchList({ toWatchSearchResults }) {
   return (
     <List
       className="search-list"
       itemLayout="horizontal"
-      dataSource={searchResults}
+      dataSource={toWatchSearchResults}
       renderItem={(item) => (
         <List.Item
           actions={[
             <Button
               type="primary"
               size="small"
-              onClick={() => handleAddMovie(item, "to watch")}
-            >
-              Add to: To Watch
-            </Button>,
-            <Button
-              type="primary"
-              size="small"
-              onClick={() => handleAddMovie(item, "in progress")}
+              //   onClick={() => handleAddMovie(item, "to watch")}
             >
               Add to: In Progress
             </Button>,
             <Button
               type="primary"
               size="small"
-              onClick={() => handleAddMovie(item, "watched")}
+              //   onClick={() => handleAddMovie(item, "in progress")}
             >
               Add to: Watched
+            </Button>,
+            <Button
+              type="primary"
+              size="small"
+              //   onClick={() => handleAddMovie(item, "watched")}
+            >
+              Remove Movie from List
             </Button>,
           ]}
         >

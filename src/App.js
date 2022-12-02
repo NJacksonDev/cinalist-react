@@ -6,9 +6,9 @@ import Cards from "./components/Cards";
 import Logout from "./components/Logout";
 import GoogleAvatar from "./components/GoogleAvatar";
 import SearchBar from "./components/SearchBar";
-import ToWatch from "./components/ToWatch";
-import { InProgress } from "./components/InProgress";
-import Watched from "./components/Watched";
+import ToWatchButton from "./components/ToWatchButton";
+import InProgressButton from "./components/InProgressButton";
+import WatchedButton from "./components/WatchedButton";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -25,10 +25,21 @@ export default function App() {
             <Logout setUser={setUser} />
             <GoogleAvatar user={user} />
             <br />
-            <SearchBar />
-            <ToWatch />
-            <InProgress />
-            <Watched />
+            <SearchBar user={user} />
+            <br />
+            <br />
+            <br />
+            <ToWatchButton user={user} />
+            <br />
+            <br />
+            <br />
+            <InProgressButton />
+            <br />
+            <br />
+            <br />
+            <WatchedButton />
+            <br />
+            <br />
             <br />
             <Cards />
             <Footer />
