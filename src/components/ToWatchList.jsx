@@ -1,6 +1,16 @@
 import { Avatar, Button, List } from "antd";
 
-export default function ToWatchList({ toWatchSearchResults }) {
+export default function ToWatchList({ toWatchSearchResults, user }) {
+  const handleClickChangeMovieStatus = (item_id) => {
+    fetch(`http://localhost:5002/usersavedmovies/towatch`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ _id: item_id, uid: user.uid }),
+    })
+      .then(() => alert("Your movie is updated."))
+      .catch(alert);
+  };
+
   return (
     <List
       className="search-list"
@@ -12,7 +22,7 @@ export default function ToWatchList({ toWatchSearchResults }) {
             <Button
               type="primary"
               size="small"
-              //   onClick={() => handleAddMovie(item, "to watch")}
+              onClick={() => handleClickChangeMovieStatus(item._id)}
             >
               Add to: In Progress
             </Button>,
@@ -22,13 +32,6 @@ export default function ToWatchList({ toWatchSearchResults }) {
               //   onClick={() => handleAddMovie(item, "in progress")}
             >
               Add to: Watched
-            </Button>,
-            <Button
-              type="primary"
-              size="small"
-              //   onClick={() => handleAddMovie(item, "watched")}
-            >
-              Remove Movie from List
             </Button>,
           ]}
         >
