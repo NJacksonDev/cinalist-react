@@ -1,17 +1,7 @@
 import { Avatar, Button, List } from "antd";
 import AlertMovieUpdated from "./AlertMovieUpdated.jsx";
 
-export default function ToWatchList({ toWatchSearchResults, user }) {
-  const handleClickChangeMovieStatusInProgress = (item_id) => {
-    fetch(`http://localhost:5002/usersavedmovies/towatch`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ _id: item_id, uid: user.uid }),
-    })
-      .then(() => alert("movie updated to in progress"))
-      .catch(alert);
-  };
-
+export default function InProgressList({ inProgressSearchResults, user }) {
   const handleClickChangeMovieStatusWatched = (item_id) => {
     fetch(`http://localhost:5002/usersavedmovies/towatch`, {
       method: "PATCH",
@@ -26,17 +16,10 @@ export default function ToWatchList({ toWatchSearchResults, user }) {
     <List
       className="search-list"
       itemLayout="horizontal"
-      dataSource={toWatchSearchResults}
+      dataSource={inProgressSearchResults}
       renderItem={(item) => (
         <List.Item
           actions={[
-            <Button
-              type="primary"
-              size="small"
-              onClick={() => handleClickChangeMovieStatusInProgress(item._id)}
-            >
-              Add to: In Progress
-            </Button>,
             <Button
               type="primary"
               size="small"

@@ -1,4 +1,4 @@
-import { Avatar, Button, List, Space } from "antd";
+import { Button, Space } from "antd";
 import ToWatchList from "./ToWatchList";
 import { useState } from "react";
 
@@ -21,8 +21,8 @@ export default function ToWatchButton({ user }) {
     <Space wrap>
       <Button onClick={handleClick} type="primary">
         To Watch Button
-        <ToWatchList user={user} toWatchSearchResults={toWatchSearchResults} />
       </Button>
+      <ToWatchList user={user} toWatchSearchResults={toWatchSearchResults} />
     </Space>
   );
 }
