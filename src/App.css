@@ -24,24 +24,25 @@ header {
   font-size: xx-large;
   color: #00ff9f;
   border: 4px solid #00ff9f;
-  padding: 20px;
+  padding: 30px;
   /* margin: 20px; */
 }
 
-/* .login-button {
+.avatar {
   display: flex;
-  justify-content: space-evenly;
-  border: 4px solid green;
-  margin: 20px;
-  padding: 20px;
-} */
+  margin-top: 5px;
+  padding: 10px;
+  border: 4px solid gray;
+  justify-content: flex-end;
+}
 
 .logout-button {
-  /* display: flex;
+  display: flex;
   align-self: flex-end;
-  border: 4px solid purple; */
-  margin: 20px;
-  padding: 20px;
+  justify-content: center;
+  border: 4px solid purple;
+  margin: 5px;
+  padding: 5px;
 }
 
 .search-text {
@@ -57,32 +58,6 @@ header {
   padding: 20px;
 }
 
-.drop-down {
-  display: flex;
-  justify-content: center;
-  border: 4px solid crimson;
-  margin: 20px;
-  padding: 20px;
-}
-
-ul {
-  border: 4px solid darkorange;
-  margin: 20px;
-  padding: 20px;
-  list-style-type: none;
-}
-
-li {
-  border: 4px solid darkorange;
-  margin: 20px;
-  padding: 20px;
-  justify-content: center;
-}
-
-.dropdown-title {
-  font-size: xx-large;
-}
-
 footer {
   display: flex;
   justify-content: center;
@@ -93,45 +68,67 @@ footer {
   font-size: small;
 }
 
-.content-container {
+.towatch-list {
+  border: 4px solid forestgreen;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  width: 50%;
   align-items: center;
-  flex-wrap: wrap;
-  border: 4px solid purple;
 }
 
-.card-container {
+.inprogress-list {
+  border: 4px solid forestgreen;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+.watched-list {
+  border: 4px solid forestgreen;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+.watch-lists {
+  display: flex;
+}
+
+.instructions-title {
+  display: flex;
+  justify-content: center;
+  border: 4px solid blue;
+}
+
+.instructions-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 4px solid blue;
+}
+
+/* .to-watch-list-meta {
+  border: 20px solid rgba(140, 140, 140, 0.35);
+  border-bottom: 20px solid rgba(140, 140, 140, 0.35);
+}
+
+.watch-list-meta {
+  border: 40px solid rgba(140, 140, 140, 0.35);
+  border-bottom: 40px solid rgba(140, 140, 140, 0.35);
+  margin: 40px;
+} */
+
+.login-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 20px;
-  border: 4px solid whitesmoke;
-  border-radius: 20%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  background-color: cadetblue;
-  width: 36%;
-  height: 18em;
+  width: 100%;
+  height: 100vh;
 }
 
-img {
-  width: 65%;
-  height: fit-content;
-}
-
-@media only screen and (max-width: 821px) {
-  .card-container {
-    width: 70%;
-  }
-}
-
-.avatar {
+/* .alert {
   display: flex;
-  margin-top: 50px;
-  padding: 20px;
-  border: 4px solid gray;
-  justify-content: flex-end;
-}
+  justify-content: center;
+  /* width: 100%; */

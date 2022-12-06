@@ -2,18 +2,18 @@ import "./App.css";
 import { useState } from "react";
 import Login from "./components/Login";
 import Header from "./components/Header";
-import Cards from "./components/Cards";
 import Logout from "./components/Logout";
 import GoogleAvatar from "./components/GoogleAvatar";
 import SearchBar from "./components/SearchBar";
-import ToWatchButton from "./components/ToWatchButton";
-import InProgressButton from "./components/InProgressButton";
-import WatchedButton from "./components/WatchedButton";
+import ToWatchList from "./components/ToWatchList";
+import InProgressList from "./components/InProgressList";
+import WatchedList from "./components/WatchedList";
 import Footer from "./components/Footer";
+import Instructions from "./components/Instructions";
 
 export default function App() {
   const [user, setUser] = useState();
-
+  // const [isUpdated, setIsUpdated] = useState(true);
   return (
     <main className="main-flex-container">
       <Header />
@@ -22,26 +22,23 @@ export default function App() {
           <Login setUser={setUser} />
         ) : (
           <>
-            <Logout setUser={setUser} />
             <GoogleAvatar user={user} />
+            <Logout setUser={setUser} />
+            <br />
+            <Instructions />
             <br />
             <SearchBar user={user} />
             <br />
             <br />
             <br />
-            <ToWatchButton user={user} />
+            <div className="watch-lists">
+              <ToWatchList user={user} />
+              <br />
+              <InProgressList user={user} />
+              <br />
+              <WatchedList user={user} />
+            </div>
             <br />
-            <br />
-            <br />
-            <InProgressButton />
-            <br />
-            <br />
-            <br />
-            <WatchedButton />
-            <br />
-            <br />
-            <br />
-            <Cards />
             <Footer />
           </>
         )}

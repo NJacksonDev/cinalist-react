@@ -1,3 +1,6 @@
+import GoogleAvatar from "./GoogleAvatar";
+import Logout from "./Logout";
+
 export default function Header() {
-  return <header className="header">CinaList</header>;
+  return <header>CinaList</header>;
 }

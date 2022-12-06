@@ -21,13 +21,11 @@ export default function Login({ setUser }) {
   };
   return (
     <>
-      <Button
-        onClick={handleGoogleLogin}
-        type="primary"
-        className="login-button"
-      >
-        Sign in with Google
-      </Button>
+      <div className="login-button">
+        <Button onClick={handleGoogleLogin} type="primary">
+          Sign in with Google
+        </Button>
+      </div>
     </>
   );
 }

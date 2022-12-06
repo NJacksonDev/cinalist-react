@@ -1,6 +1,10 @@
 import { Alert, Space } from "antd";
 
-export default function AlertMovieUpdated() {
+export default function AlertMovieWatchStatusUpdated({
+  showAlert,
+  setShowAlert,
+}) {
+  console.log("should show alert");
   return (
     <Space
       direction="vertical"
@@ -10,9 +14,13 @@ export default function AlertMovieUpdated() {
     >
       <Alert
         message="Success!"
-        description="Your movie watch status has been updated to: In Progress"
+        description="Your movie watch status has been updated."
         type="success"
         showIcon
+        closable
+        onClose={() => {
+          setShowAlert(!showAlert);
+        }}
       />
     </Space>
   );
