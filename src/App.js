@@ -13,7 +13,7 @@ import Instructions from "./components/Instructions";
 
 export default function App() {
   const [user, setUser] = useState();
-  // const [isUpdated, setIsUpdated] = useState(true);
+  const [isUpdated, setIsUpdated] = useState(false);
   return (
     <main className="main-flex-container">
       <Header />
@@ -32,9 +32,17 @@ export default function App() {
             <br />
             <br />
             <div className="watch-lists">
-              <ToWatchList user={user} />
+              <ToWatchList
+                user={user}
+                isUpdated={isUpdated}
+                setIsUpdated={setIsUpdated}
+              />
               <br />
-              <InProgressList user={user} />
+              <InProgressList
+                user={user}
+                isUpdated={isUpdated}
+                setIsUpdated={setIsUpdated}
+              />
               <br />
               <WatchedList user={user} />
             </div>

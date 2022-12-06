@@ -1,15 +1,18 @@
 import { Avatar, Button, List } from "antd";
 import { useState, useEffect } from "react";
 
-export default function InProgressList({ user }) {
+export default function InProgressList({ user, isUpdated, setIsUpdated }) {
   const [inProgressListResults, setInProgressListResults] = useState();
 
   useEffect(() => {
     fetch(`http://localhost:5002/usersavedmovies/inprogress`)
       .then((results) => results.json())
-      .then((data) => setInProgressListResults(data))
+      .then((data) => {
+        setInProgressListResults(data);
+        setIsUpdated(!isUpdated);
+      })
       .catch(alert);
-  }, []);
+  }, [isUpdated]);
 
   // http://localhost:5002/usersavedmovies/inprogress
   // https://practice-cloud-api-nj.web.app/usersavedmovies/inprogress

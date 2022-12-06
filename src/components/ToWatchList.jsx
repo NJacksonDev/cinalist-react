@@ -2,16 +2,19 @@ import { Avatar, Button, List } from "antd";
 import { useState, useEffect } from "react";
 import AlertMovieWatchStatusUpdated from "./AlertMovieUpdated";
 
-export default function ToWatchList({ user }) {
+export default function ToWatchList({ user, setIsUpdated, isUpdated }) {
   const [showAlert, setShowAlert] = useState(false);
   const [toWatchListResults, setToWatchListResults] = useState();
 
   useEffect(() => {
     fetch(`http://localhost:5002/usersavedmovies/towatch`)
       .then((results) => results.json())
-      .then((data) => setToWatchListResults(data))
+      .then((data) => {
+        setToWatchListResults(data);
+        setIsUpdated(!isUpdated);
+      })
       .catch(alert);
-  }, [showAlert]);
+  }, [showAlert, isUpdated]);
 
   // http://localhost:5002/usersavedmovies/towatch
   // https://practice-cloud-api-nj.web.app/usersavedmovies/towatch
@@ -22,7 +25,10 @@ export default function ToWatchList({ user }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),
     })
-      .then(() => setShowAlert(!showAlert))
+      .then(() => {
+        setShowAlert(!showAlert);
+        setIsUpdated(!isUpdated);
+      })
       .catch(alert);
   };
 

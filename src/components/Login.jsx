@@ -22,7 +22,7 @@ export default function Login({ setUser }) {
   return (
     <>
       <div className="login-button">
-        <Button onClick={handleGoogleLogin} type="primary">
+        <Button onClick={handleGoogleLogin} type="primary" size="large">
           Sign in with Google
         </Button>
       </div>
