@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import Login from "./components/Login";
-import Header from "./components/Header";
+import LandingPage from "./components/LandingPage";
 import Logout from "./components/Logout";
 import GoogleAvatar from "./components/GoogleAvatar";
 import SearchBar from "./components/SearchBar";
@@ -18,46 +18,50 @@ export default function App() {
   const [showAlertAdded, setShowAlertAdded] = useState(false);
   return (
     <main className="main-flex-container">
-      <Header />
       <div>
         {!user ? (
-          <Login setUser={setUser} />
+          <>
+            <LandingPage />
+            <Login setUser={setUser} />
+          </>
         ) : (
           <>
-            <GoogleAvatar user={user} />
-            <Logout setUser={setUser} />
-            <br />
-            <Instructions />
-            <br />
-            <SearchBar
-              user={user}
-              setIsUpdated={setIsUpdated}
-              isUpdated={isUpdated}
-              setShowAlertAdded={setShowAlertAdded}
-              showAlertAdded={showAlertAdded}
-            />
-            <br />
-            <br />
-            <br />
-            <div className="watch-lists">
-              <ToWatchList
+            <div className="main-flex-container">
+              <GoogleAvatar user={user} />
+              <Logout setUser={setUser} />
+              <br />
+              <Instructions />
+              <br />
+              <SearchBar
                 user={user}
-                isUpdated={isUpdated}
                 setIsUpdated={setIsUpdated}
-                setShowAlertUpdated={setShowAlertUpdated}
-                showAlertUpdated={showAlertUpdated}
+                isUpdated={isUpdated}
+                setShowAlertAdded={setShowAlertAdded}
+                showAlertAdded={showAlertAdded}
               />
               <br />
-              <InProgressList
-                user={user}
-                isUpdated={isUpdated}
-                setIsUpdated={setIsUpdated}
-              />
               <br />
-              <WatchedList user={user} />
+              <br />
+              <div className="watch-lists">
+                <ToWatchList
+                  user={user}
+                  isUpdated={isUpdated}
+                  setIsUpdated={setIsUpdated}
+                  setShowAlertUpdated={setShowAlertUpdated}
+                  showAlertUpdated={showAlertUpdated}
+                />
+                <br />
+                <InProgressList
+                  user={user}
+                  isUpdated={isUpdated}
+                  setIsUpdated={setIsUpdated}
+                />
+                <br />
+                <WatchedList user={user} />
+              </div>
+              <br />
+              <Footer />
             </div>
-            <br />
-            <Footer />
           </>
         )}
       </div>

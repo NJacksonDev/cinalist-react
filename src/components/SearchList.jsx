@@ -16,10 +16,12 @@ export default function SearchList({
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ ...item, status: status, uid: user.uid }),
-    }).then(() => {
-      setShowAlertAdded(!showAlertAdded);
-      setIsUpdated(!isUpdated);
-    });
+    })
+      .then(() => {
+        setShowAlertAdded(!showAlertAdded);
+        setIsUpdated(!isUpdated);
+      })
+      .catch((err) => console.error(err));
   };
 
   return (
