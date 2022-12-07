@@ -109,16 +109,18 @@ footer {
   border: 4px solid blue;
 }
 
-/* .to-watch-list-meta {
+.to-watch-meta {
+  display: flex;
+  justify-content: center;
   border: 20px solid rgba(140, 140, 140, 0.35);
   border-bottom: 20px solid rgba(140, 140, 140, 0.35);
 }
 
-.watch-list-meta {
-  border: 40px solid rgba(140, 140, 140, 0.35);
-  border-bottom: 40px solid rgba(140, 140, 140, 0.35);
-  margin: 40px;
-} */
+.to-watch-list-meta {
+  border: 10px solid rgba(140, 140, 140, 0.35);
+  border-bottom: 10px solid rgba(140, 140, 140, 0.35);
+  margin: 10px;
+}
 
 .login-button {
   display: flex;

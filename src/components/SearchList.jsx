@@ -1,6 +1,13 @@
 import { Avatar, Button, List } from "antd";
 
-export default function SearchList({ searchResults, user }) {
+export default function SearchList({
+  searchResults,
+  user,
+  setIsUpdated,
+  isUpdated,
+  setShowAlert,
+  showAlert,
+}) {
   const handleAddMovie = (item, status) => {
     fetch(`http://localhost:5002/usersavedmovies`, {
       method: "POST",
@@ -8,7 +15,12 @@ export default function SearchList({ searchResults, user }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ ...item, status: status, uid: user.uid }),
-    });
+    })
+      .then(() => {
+        setShowAlert(!showAlert);
+        setIsUpdated(!isUpdated);
+      })
+      .catch(alert);
   };
 
   return (

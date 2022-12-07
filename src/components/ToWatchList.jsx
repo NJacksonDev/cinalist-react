@@ -1,18 +1,21 @@
 import { Avatar, Button, List } from "antd";
 import { useState, useEffect } from "react";
 import AlertMovieWatchStatusUpdated from "./AlertMovieUpdated";
+import "../App.css";
 
-export default function ToWatchList({ user, setIsUpdated, isUpdated }) {
-  const [showAlert, setShowAlert] = useState(false);
+export default function ToWatchList({
+  user,
+  setIsUpdated,
+  isUpdated,
+  showAlert,
+  setShowAlert,
+}) {
   const [toWatchListResults, setToWatchListResults] = useState();
 
   useEffect(() => {
     fetch(`http://localhost:5002/usersavedmovies/towatch`)
       .then((results) => results.json())
-      .then((data) => {
-        setToWatchListResults(data);
-        setIsUpdated(!isUpdated);
-      })
+      .then((data) => setToWatchListResults(data))
       .catch(alert);
   }, [showAlert, isUpdated]);
 

@@ -9,7 +9,7 @@ export default function InProgressList({ user, isUpdated, setIsUpdated }) {
       .then((results) => results.json())
       .then((data) => {
         setInProgressListResults(data);
-        setIsUpdated(!isUpdated);
+        // setIsUpdated(!isUpdated);
       })
       .catch(alert);
   }, [isUpdated]);
