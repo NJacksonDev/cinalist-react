@@ -1,6 +1,7 @@
 import { Avatar, Button, List } from "antd";
 import { useState, useEffect } from "react";
 import AlertMovieWatchStatusUpdated from "./AlertMovieUpdated";
+import AlertMovieWatchStatusDeleted from "./AlertMovieDeleted";
 
 export default function ToWatchList({
   user,
@@ -8,6 +9,8 @@ export default function ToWatchList({
   isUpdated,
   showAlertUpdated,
   setShowAlertUpdated,
+  showAlertDeleted,
+  setShowAlertDeleted,
 }) {
   const [toWatchListResults, setToWatchListResults] = useState();
 
@@ -16,7 +19,7 @@ export default function ToWatchList({
       .then((results) => results.json())
       .then((data) => setToWatchListResults(data))
       .catch(alert);
-  }, [showAlertUpdated, isUpdated]);
+  }, [showAlertUpdated, isUpdated, showAlertDeleted]);
 
   // http://localhost:5002/usersavedmovies/towatch
   // https://practice-cloud-api-nj.web.app/usersavedmovies/towatch
@@ -40,7 +43,10 @@ export default function ToWatchList({
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),
     })
-      .then(() => alert("movie updated to watched"))
+      .then(() => {
+        setShowAlertUpdated(!showAlertUpdated);
+        setIsUpdated(!isUpdated);
+      })
       .catch(alert);
   };
 
@@ -50,7 +56,10 @@ export default function ToWatchList({
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),
     })
-      .then(() => alert("movie removed from list"))
+      .then(() => {
+        setShowAlertDeleted(!showAlertDeleted);
+        setIsUpdated(!isUpdated);
+      })
       .catch(alert);
   };
 
@@ -64,6 +73,12 @@ export default function ToWatchList({
           />
         )}
       </div>
+      {showAlertDeleted && (
+        <AlertMovieWatchStatusDeleted
+          showAlertDeleted={showAlertDeleted}
+          setShowAlertDeleted={setShowAlertDeleted}
+        />
+      )}
       <br />
       <List
         className="towatch-list"

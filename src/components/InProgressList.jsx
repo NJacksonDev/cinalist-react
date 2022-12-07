@@ -1,7 +1,17 @@
 import { Avatar, Button, List } from "antd";
 import { useState, useEffect } from "react";
+import AlertMovieWatchStatusUpdated from "./AlertMovieUpdated";
+import AlertMovieWatchStatusDeleted from "./AlertMovieDeleted";
 
-export default function InProgressList({ user, isUpdated, setIsUpdated }) {
+export default function InProgressList({
+  user,
+  setIsUpdated,
+  isUpdated,
+  showAlertUpdated,
+  setShowAlertUpdated,
+  showAlertDeleted,
+  setShowAlertDeleted,
+}) {
   const [inProgressListResults, setInProgressListResults] = useState();
 
   useEffect(() => {
@@ -9,10 +19,9 @@ export default function InProgressList({ user, isUpdated, setIsUpdated }) {
       .then((results) => results.json())
       .then((data) => {
         setInProgressListResults(data);
-        // setIsUpdated(!isUpdated);
       })
       .catch(alert);
-  }, [isUpdated]);
+  }, [showAlertUpdated, isUpdated, showAlertDeleted]);
 
   // http://localhost:5002/usersavedmovies/inprogress
   // https://practice-cloud-api-nj.web.app/usersavedmovies/inprogress
@@ -23,7 +32,11 @@ export default function InProgressList({ user, isUpdated, setIsUpdated }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),
     })
-      .then(() => alert("movie updated to watched"))
+      .then(() => {
+        setShowAlertUpdated(!showAlertUpdated);
+        setIsUpdated(!isUpdated);
+        setShowAlertDeleted(!showAlertDeleted);
+      })
       .catch(alert);
   };
 
@@ -33,12 +46,31 @@ export default function InProgressList({ user, isUpdated, setIsUpdated }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),
     })
-      .then(() => alert("movie removed from list"))
+      .then(() => {
+        setShowAlertUpdated(!showAlertUpdated);
+        setIsUpdated(!isUpdated);
+        setShowAlertDeleted(!showAlertDeleted);
+      })
       .catch(alert);
   };
 
   return (
     <>
+      <div>
+        {showAlertUpdated && (
+          <AlertMovieWatchStatusUpdated
+            showAlertUpdated={showAlertUpdated}
+            setShowAlertUpdated={setShowAlertUpdated}
+          />
+        )}
+      </div>
+      {showAlertDeleted && (
+        <AlertMovieWatchStatusDeleted
+          showAlertDeleted={showAlertDeleted}
+          setShowAlertDeleted={setShowAlertDeleted}
+        />
+      )}
+      <br />
       <List
         className="inprogress-list"
         itemLayout="vertical"

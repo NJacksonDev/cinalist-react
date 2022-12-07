@@ -1,7 +1,13 @@
 import { Avatar, List, Button, Space } from "antd";
 import { useState, useEffect } from "react";
 
-export default function WatchedList({ user }) {
+export default function WatchedList({
+  user,
+  setIsUpdated,
+  isUpdated,
+  showAlertDeleted,
+  setShowAlertDeleted,
+}) {
   const [watchedListResults, setWatchedListResults] = useState();
 
   useEffect(() => {
@@ -9,7 +15,7 @@ export default function WatchedList({ user }) {
       .then((results) => results.json())
       .then((data) => setWatchedListResults(data))
       .catch(alert);
-  }, []);
+  }, [isUpdated, showAlertDeleted]);
 
   // http://localhost:5002/usersavedmovies/watched
   // https://practice-cloud-api-nj.web.app/usersavedmovies/watched
@@ -20,12 +26,21 @@ export default function WatchedList({ user }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),
     })
-      .then(() => alert("movie removed from list"))
+      .then(() => {
+        setShowAlertDeleted(!showAlertDeleted);
+        setIsUpdated(!isUpdated);
+      })
       .catch(alert);
   };
 
   return (
     <>
+      {showAlertDeleted && (
+        <AlertMovieWatchStatusDeleted
+          showAlertDeleted={showAlertDeleted}
+          setShowAlertDeleted={setShowAlertDeleted}
+        />
+      )}
       <List
         className="watched-list"
         itemLayout="vertical"

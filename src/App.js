@@ -14,6 +14,7 @@ import Instructions from "./components/Instructions";
 export default function App() {
   const [user, setUser] = useState();
   const [isUpdated, setIsUpdated] = useState(false);
+  const [showAlertDeleted, setShowAlertDeleted] = useState(false);
   const [showAlertUpdated, setShowAlertUpdated] = useState(false);
   const [showAlertAdded, setShowAlertAdded] = useState(false);
   return (
@@ -37,7 +38,7 @@ export default function App() {
                 setIsUpdated={setIsUpdated}
                 isUpdated={isUpdated}
                 setShowAlertAdded={setShowAlertAdded}
-                showAlertAdded={showAlertAdded}
+                showAlertAdded={setShowAlertAdded}
               />
               <br />
               <br />
@@ -49,12 +50,16 @@ export default function App() {
                   setIsUpdated={setIsUpdated}
                   setShowAlertUpdated={setShowAlertUpdated}
                   showAlertUpdated={showAlertUpdated}
+                  showAlertDeleted={showAlertDeleted}
+                  setShowAlertDeleted={setShowAlertDeleted}
                 />
                 <br />
                 <InProgressList
                   user={user}
                   isUpdated={isUpdated}
                   setIsUpdated={setIsUpdated}
+                  showAlertDeleted={showAlertDeleted}
+                  setShowAlertDeleted={setShowAlertDeleted}
                 />
                 <br />
                 <WatchedList user={user} />
