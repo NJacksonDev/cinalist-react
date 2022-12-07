@@ -130,7 +130,14 @@ footer {
   height: 100vh;
 }
 
-/* .alert {
+.alert-movie-updated {
   display: flex;
   justify-content: center;
-  /* width: 100%; */
+  width: 100%;
+}
+
+.alert-movie-added {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

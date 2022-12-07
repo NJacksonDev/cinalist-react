@@ -10,13 +10,12 @@ import InProgressList from "./components/InProgressList";
 import WatchedList from "./components/WatchedList";
 import Footer from "./components/Footer";
 import Instructions from "./components/Instructions";
-import SearchList from "./components/SearchList";
-import { MessageMovieUpdated } from "./components/MessageMovieUpdated";
 
 export default function App() {
   const [user, setUser] = useState();
   const [isUpdated, setIsUpdated] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
+  const [showAlertUpdated, setShowAlertUpdated] = useState(false);
+  const [showAlertAdded, setShowAlertAdded] = useState(false);
   return (
     <main className="main-flex-container">
       <Header />
@@ -30,14 +29,13 @@ export default function App() {
             <br />
             <Instructions />
             <br />
-            <SearchBar user={user} />
-            <SearchList
+            <SearchBar
+              user={user}
               setIsUpdated={setIsUpdated}
               isUpdated={isUpdated}
-              setShowAlert={setShowAlert}
-              showAlert={showAlert}
+              setShowAlertAdded={setShowAlertAdded}
+              showAlertAdded={showAlertAdded}
             />
-            <MessageMovieUpdated />
             <br />
             <br />
             <br />
@@ -46,8 +44,8 @@ export default function App() {
                 user={user}
                 isUpdated={isUpdated}
                 setIsUpdated={setIsUpdated}
-                setShowAlert={setShowAlert}
-                showAlert={showAlert}
+                setShowAlertUpdated={setShowAlertUpdated}
+                showAlertUpdated={showAlertUpdated}
               />
               <br />
               <InProgressList

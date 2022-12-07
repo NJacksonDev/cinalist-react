@@ -1,8 +1,8 @@
 import { Alert, Space } from "antd";
 
-export default function AlertMovieWatchStatusUpdated({
-  showAlertUpdated,
-  setShowAlertUpdated,
+export default function AlertMovieWatchStatusAdded({
+  showAlertAdded,
+  setShowAlertAdded,
 }) {
   return (
     <Space
@@ -12,14 +12,14 @@ export default function AlertMovieWatchStatusUpdated({
       }}
     >
       <Alert
-        className="alert-movie-updated"
+        className="alert-movie-added"
         message="Success!"
-        description="Your movie watch status has been updated."
+        description="This movie has been added to your list."
         type="success"
         showIcon
         closable
         onClose={() => {
-          setShowAlertUpdated(!showAlertUpdated);
+          setShowAlertAdded(!showAlertAdded);
         }}
       />
     </Space>

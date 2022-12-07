@@ -3,7 +3,13 @@ import { useState } from "react";
 import SearchList from "./SearchList";
 const { Search } = Input;
 
-export default function SearchBar({ user }) {
+export default function SearchBar({
+  user,
+  isUpdated,
+  setIsUpdated,
+  showAlertAdded,
+  setShowAlertAdded,
+}) {
   const [searchResults, setSearchResults] = useState();
 
   function onSearch(value) {
@@ -35,7 +41,14 @@ export default function SearchBar({ user }) {
         }}
       />
       {searchResults && (
-        <SearchList user={user} searchResults={searchResults} />
+        <SearchList
+          user={user}
+          searchResults={searchResults}
+          setIsUpdated={setIsUpdated}
+          isUpdated={isUpdated}
+          setShowAlertAdded={setShowAlertAdded}
+          showAlertAdded={showAlertAdded}
+        />
       )}
     </Space>
   );
