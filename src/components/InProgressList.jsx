@@ -35,7 +35,6 @@ export default function InProgressList({
       .then(() => {
         setShowAlertUpdated(!showAlertUpdated);
         setIsUpdated(!isUpdated);
-        setShowAlertDeleted(!showAlertDeleted);
       })
       .catch(alert);
   };
@@ -47,7 +46,6 @@ export default function InProgressList({
       body: JSON.stringify({ _id: item_id, uid: user.uid }),
     })
       .then(() => {
-        setShowAlertUpdated(!showAlertUpdated);
         setIsUpdated(!isUpdated);
         setShowAlertDeleted(!showAlertDeleted);
       })

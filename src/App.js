@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-import Login from "./components/Login";
 import LandingPage from "./components/LandingPage";
 import Logout from "./components/Logout";
 import GoogleAvatar from "./components/GoogleAvatar";
@@ -22,8 +21,7 @@ export default function App() {
       <div>
         {!user ? (
           <>
-            <LandingPage />
-            <Login setUser={setUser} />
+            <LandingPage setUser={setUser} />
           </>
         ) : (
           <>
@@ -38,7 +36,7 @@ export default function App() {
                 setIsUpdated={setIsUpdated}
                 isUpdated={isUpdated}
                 setShowAlertAdded={setShowAlertAdded}
-                showAlertAdded={setShowAlertAdded}
+                showAlertAdded={showAlertAdded}
               />
               <br />
               <br />
@@ -58,11 +56,21 @@ export default function App() {
                   user={user}
                   isUpdated={isUpdated}
                   setIsUpdated={setIsUpdated}
+                  setShowAlertUpdated={setShowAlertUpdated}
+                  showAlertUpdated={showAlertUpdated}
                   showAlertDeleted={showAlertDeleted}
                   setShowAlertDeleted={setShowAlertDeleted}
                 />
                 <br />
-                <WatchedList user={user} />
+                <WatchedList
+                  user={user}
+                  isUpdated={isUpdated}
+                  setIsUpdated={setIsUpdated}
+                  showAlertDeleted={showAlertDeleted}
+                  setShowAlertDeleted={setShowAlertDeleted}
+                  showAlertUpdated={showAlertUpdated}
+                  setShowAlertUpdated={setShowAlertUpdated}
+                />
               </div>
               <br />
               <Footer />

@@ -1,10 +1,12 @@
-import { Avatar, List, Button, Space } from "antd";
+import { Avatar, List, Button } from "antd";
 import { useState, useEffect } from "react";
+import AlertMovieWatchStatusDeleted from "./AlertMovieDeleted";
 
 export default function WatchedList({
   user,
   setIsUpdated,
   isUpdated,
+  showAlertUpdated,
   showAlertDeleted,
   setShowAlertDeleted,
 }) {
@@ -15,7 +17,7 @@ export default function WatchedList({
       .then((results) => results.json())
       .then((data) => setWatchedListResults(data))
       .catch(alert);
-  }, [isUpdated, showAlertDeleted]);
+  }, [showAlertUpdated, isUpdated, showAlertDeleted]);
 
   // http://localhost:5002/usersavedmovies/watched
   // https://practice-cloud-api-nj.web.app/usersavedmovies/watched

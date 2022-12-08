@@ -22,7 +22,6 @@ export default function SearchBar({
       .then((data) => setSearchResults(data))
       .catch(alert);
 
-    console.log(searchResults);
     // http://localhost:5002/movies?term=${value}
     // https://practice-cloud-api-nj.web.app/movies?term=${value}
   }

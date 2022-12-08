@@ -25,7 +25,7 @@ export default function ToWatchList({
   // https://practice-cloud-api-nj.web.app/usersavedmovies/towatch
 
   const handleClickChangeMovieStatusToInProgress = (item_id) => {
-    fetch(`http://localhost:5002/usersavedmovies/towatch`, {
+    fetch(`http://localhost:5002/usersavedmovies/towatch/movetoinprogress`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),
@@ -38,7 +38,7 @@ export default function ToWatchList({
   };
 
   const handleClickChangeMovieStatusToWatched = (item_id) => {
-    fetch(`http://localhost:5002/usersavedmovies/towatch`, {
+    fetch(`http://localhost:5002/usersavedmovies/towatch/movetowatched`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),

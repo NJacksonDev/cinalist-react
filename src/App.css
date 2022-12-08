@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+
 *,
 *::after,
 *::before {
@@ -10,10 +12,11 @@
   display: flex;
   flex-direction: column;
   border: 4px solid midnightblue;
-  padding: 20px;
   text-align: center;
-  background-color: rgb(200, 139, 193);
-  min-height: 120vh;
+  background-color: blueviolet;
+  font-family: "Orbitron", courier, sans-serif;
+  color: #fcee09;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
   font-size: calc(10px + 2vmin);
 }
 
@@ -39,10 +42,9 @@ header {
 .logout-button {
   display: flex;
   align-self: flex-end;
-  justify-content: center;
-  border: 4px solid purple;
-  margin: 5px;
-  padding: 5px;
+  /* justify-content: center; */
+  /* margin: 5px;
+  padding: 5px; */
 }
 
 .search-text {
@@ -90,10 +92,18 @@ footer {
   flex-direction: column;
   width: 50%;
   align-items: center;
+  font-family: "Orbitron", courier, sans-serif;
+  color: rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  font-size: calc(2px + 2vmin);
 }
 
 .watch-lists {
   display: flex;
+  font-family: "Orbitron", courier, sans-serif;
+  color: rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  font-size: calc(10px + 2vmin);
 }
 
 .instructions-title {
@@ -127,12 +137,10 @@ footer {
   justify-content: center;
   border: 20px solid rgba(140, 140, 140, 0.35);
   border-bottom: 20px solid rgba(140, 140, 140, 0.35);
-}
-
-.to-watch-list-meta {
-  border: 10px solid rgba(140, 140, 140, 0.35);
-  border-bottom: 10px solid rgba(140, 140, 140, 0.35);
-  margin: 10px;
+  font-family: "Orbitron", courier, sans-serif;
+  color: rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  font-size: calc(10px + 2vmin);
 }
 
 .alert-movie-added {
@@ -141,8 +149,28 @@ footer {
   width: 100%;
 }
 
-.landing-page {
+.landing-page-container {
+  background-image: url("./components/component-pics/cyber-city.jpeg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+.landing-page-text-container {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-size: calc(25px + 2vmin);
+  width: 65%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
 }
