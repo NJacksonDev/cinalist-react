@@ -88,7 +88,7 @@ export default function ToWatchList({
         dataSource={toWatchListResults}
         renderItem={(item) => (
           <List.Item
-            className="to-watch-list-meta"
+            className="to-watch-title"
             actions={[
               <Button
                 type="primary"
@@ -116,7 +116,7 @@ export default function ToWatchList({
             ]}
           >
             <List.Item.Meta
-              className="to-watch-meta"
+              className="to-watch-list-meta-items"
               avatar={<Avatar src={item.poster} size={110} shape="square" />}
               title={<h3>{item.title}</h3>}
               description={item.year}

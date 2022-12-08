@@ -9,6 +9,7 @@ import InProgressList from "./components/InProgressList";
 import WatchedList from "./components/WatchedList";
 import Footer from "./components/Footer";
 import Instructions from "./components/Instructions";
+import Header from "./components/Header";
 
 export default function App() {
   const [user, setUser] = useState();
@@ -26,6 +27,7 @@ export default function App() {
         ) : (
           <>
             <div className="main-flex-container">
+              <Header />
               <GoogleAvatar user={user} />
               <Logout setUser={setUser} />
               <br />

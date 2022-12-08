@@ -16,7 +16,7 @@
   background-color: blueviolet;
   font-family: "Orbitron", courier, sans-serif;
   color: #fcee09;
-  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  text-shadow: 0 0 2px rgba(157, 208, 154, 0.3);
   font-size: calc(10px + 2vmin);
 }
 
@@ -25,10 +25,9 @@ header {
   display: flex;
   justify-content: center;
   font-size: xx-large;
-  color: #00ff9f;
-  border: 4px solid #00ff9f;
+  color: #fcee09;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
   padding: 30px;
-  /* margin: 20px; */
 }
 
 .avatar {
@@ -42,13 +41,13 @@ header {
 .logout-button {
   display: flex;
   align-self: flex-end;
-  /* justify-content: center; */
-  /* margin: 5px;
-  padding: 5px; */
+  font-family: "Orbitron", courier, sans-serif;
+  color: #fcee09;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
 }
 
 .search-text {
-  border: 4px solid navy;
+  border: 4px solid #fcee09;
   margin: 20px;
   padding: 20px;
 }
@@ -66,34 +65,41 @@ footer {
   margin: 20px;
   margin-top: 50px;
   padding: 20px;
-  border: 4px solid brown;
   font-size: small;
 }
 
 .towatch-list {
-  border: 4px solid forestgreen;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  align-items: center;
-}
-
-.inprogress-list {
-  border: 4px solid forestgreen;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  align-items: center;
-}
-
-.watched-list {
-  border: 4px solid forestgreen;
+  border: 4px solid rgba(255, 255, 255, 0.15);
   display: flex;
   flex-direction: column;
   width: 50%;
   align-items: center;
   font-family: "Orbitron", courier, sans-serif;
-  color: rgba(255, 255, 255, 0.3);
+  color: #fcee09;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  font-size: calc(2px + 2vmin);
+}
+
+.inprogress-list {
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  font-family: "Orbitron", courier, sans-serif;
+  color: #fcee09;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  font-size: calc(2px + 2vmin);
+}
+
+.watched-list {
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  font-family: "Orbitron", courier, sans-serif;
+  color: #fcee09;
   text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
   font-size: calc(2px + 2vmin);
 }
@@ -104,6 +110,7 @@ footer {
   color: rgba(255, 255, 255, 0.3);
   text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
   font-size: calc(10px + 2vmin);
+  border: rgba(255, 255, 255, 0.15);
 }
 
 .instructions-title {
@@ -124,29 +131,39 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
+  font-family: "Orbitron", courier, sans-serif;
+  color: #fcee09;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
 }
 
 .alert-movie-updated {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.to-watch-meta {
-  display: flex;
-  justify-content: center;
-  border: 20px solid rgba(140, 140, 140, 0.35);
-  border-bottom: 20px solid rgba(140, 140, 140, 0.35);
+  position: fixed;
+  top: 0;
+  left: 40%;
+  z-index: 1;
   font-family: "Orbitron", courier, sans-serif;
-  color: rgba(255, 255, 255, 0.3);
   text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
-  font-size: calc(10px + 2vmin);
+  font-size: calc(2px + 2vmin);
 }
 
 .alert-movie-added {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 40%;
+  z-index: 1;
+  font-family: "Orbitron", courier, sans-serif;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  font-size: calc(2px + 2vmin);
+}
+
+.alert-movie-deleted {
+  position: fixed;
+  top: 0;
+  left: 40%;
+  z-index: 1;
+  font-family: "Orbitron", courier, sans-serif;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  font-size: calc(2px + 2vmin);
 }
 
 .landing-page-container {
@@ -173,4 +190,24 @@ footer {
   align-items: center;
   flex-direction: column;
   backdrop-filter: blur(10px);
+}
+
+.to-watch-title {
+  font-family: "Orbitron", courier, sans-serif;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  font-size: calc(2px + 2vmin);
+  border: green;
+}
+
+.to-watch-list-meta-items {
+  font-family: "Orbitron", courier, sans-serif;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  font-size: calc(2px + 2vmin);
+  border: green;
+}
+
+.watched-list-item-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

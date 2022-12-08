@@ -62,6 +62,7 @@ export default function WatchedList({
             ]}
           >
             <List.Item.Meta
+              className="watched-list-item-meta"
               avatar={<Avatar src={item.poster} size={110} shape="square" />}
               title={<h3>{item.title}</h3>}
               description={item.year}
