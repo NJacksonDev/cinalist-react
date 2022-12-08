@@ -50,7 +50,7 @@ export default function WatchedList({
         dataSource={watchedListResults}
         renderItem={(item) => (
           <List.Item
-            className="watch-list-meta"
+            className="watched-list-meta"
             actions={[
               <Button
                 type="primary"

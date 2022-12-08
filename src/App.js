@@ -1,8 +1,6 @@
 import "./App.css";
 import { useState } from "react";
 import LandingPage from "./components/LandingPage";
-import Logout from "./components/Logout";
-import GoogleAvatar from "./components/GoogleAvatar";
 import SearchBar from "./components/SearchBar";
 import ToWatchList from "./components/ToWatchList";
 import InProgressList from "./components/InProgressList";
@@ -27,9 +25,7 @@ export default function App() {
         ) : (
           <>
             <div className="main-flex-container">
-              <Header />
-              <GoogleAvatar user={user} />
-              <Logout setUser={setUser} />
+              <Header user={user} setUser={setUser} />
               <br />
               <Instructions />
               <br />

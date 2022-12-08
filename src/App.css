@@ -11,11 +11,10 @@
 .main-flex-container {
   display: flex;
   flex-direction: column;
-  border: 4px solid midnightblue;
   text-align: center;
   background-color: blueviolet;
   font-family: "Orbitron", courier, sans-serif;
-  color: #fcee09;
+  color: black;
   text-shadow: 0 0 2px rgba(157, 208, 154, 0.3);
   font-size: calc(10px + 2vmin);
 }
@@ -28,6 +27,11 @@ header {
   color: #fcee09;
   text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
   padding: 30px;
+}
+
+.header-text {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .avatar {
@@ -78,6 +82,8 @@ footer {
   color: #fcee09;
   text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
   font-size: calc(2px + 2vmin);
+  width: 30%;
+  min-width: 485px;
 }
 
 .inprogress-list {
@@ -90,6 +96,8 @@ footer {
   color: #fcee09;
   text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
   font-size: calc(2px + 2vmin);
+  width: 30%;
+  min-width: 484px;
 }
 
 .watched-list {
@@ -102,6 +110,8 @@ footer {
   color: #fcee09;
   text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
   font-size: calc(2px + 2vmin);
+  width: 30%;
+  min-width: 484px;
 }
 
 .watch-lists {
@@ -111,19 +121,19 @@ footer {
   text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
   font-size: calc(10px + 2vmin);
   border: rgba(255, 255, 255, 0.15);
+  flex-wrap: wrap;
 }
 
 .instructions-title {
   display: flex;
   justify-content: center;
-  border: 4px solid blue;
 }
 
 .instructions-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 4px solid blue;
+  line-height: 50px;
 }
 
 .login-button {
@@ -209,5 +219,13 @@ footer {
 .watched-list-item-meta {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  width: 100px;
+}
+
+.ant-spin-nested-loading {
+  width: 100% !important;
+}
+
+.ant-list-item-meta-content {
+  min-width: 200px !important;
 }
