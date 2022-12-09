@@ -8,6 +8,8 @@ import WatchedList from "./components/WatchedList";
 import Footer from "./components/Footer";
 import Instructions from "./components/Instructions";
 import Header from "./components/Header";
+import GoogleAvatar from "./components/GoogleAvatar";
+import Logout from "./components/Logout";
 
 export default function App() {
   const [user, setUser] = useState();
@@ -25,7 +27,9 @@ export default function App() {
         ) : (
           <>
             <div className="main-flex-container">
-              <Header user={user} setUser={setUser} />
+              <Header />
+              <GoogleAvatar user={user} />
+              <Logout setUser={setUser} />
               <br />
               <Instructions />
               <br />
