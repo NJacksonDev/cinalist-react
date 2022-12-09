@@ -194,7 +194,7 @@ footer {
   justify-content: center;
 }
 
-.watched-list-item-meta {
+.to .watched-list-item-meta {
   display: flex;
   align-items: center;
   width: 100px;

@@ -1,7 +1,5 @@
 import { Avatar, Button, List } from "antd";
 import { useState, useEffect } from "react";
-import AlertMovieWatchStatusUpdated from "./AlertMovieUpdated";
-import AlertMovieWatchStatusDeleted from "./AlertMovieDeleted";
 
 export default function InProgressList({
   user,
@@ -54,20 +52,6 @@ export default function InProgressList({
 
   return (
     <>
-      {/* <div>
-        {showAlertUpdated && (
-          <AlertMovieWatchStatusUpdated
-            showAlertUpdated={showAlertUpdated}
-            setShowAlertUpdated={setShowAlertUpdated}
-          />
-        )}
-      </div>
-      {showAlertDeleted && (
-        <AlertMovieWatchStatusDeleted
-          showAlertDeleted={showAlertDeleted}
-          setShowAlertDeleted={setShowAlertDeleted}
-        />
-      )} */}
       <List
         className="inprogress-list"
         itemLayout="vertical"

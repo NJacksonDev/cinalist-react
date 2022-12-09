@@ -1,6 +1,5 @@
 import { Avatar, List, Button } from "antd";
 import { useState, useEffect } from "react";
-import AlertMovieWatchStatusDeleted from "./AlertMovieDeleted";
 
 export default function WatchedList({
   user,
@@ -34,12 +33,6 @@ export default function WatchedList({
 
   return (
     <>
-      {/* {showAlertDeleted && (
-        <AlertMovieWatchStatusDeleted
-          showAlertDeleted={showAlertDeleted}
-          setShowAlertDeleted={setShowAlertDeleted}
-        />
-      )} */}
       <List
         className="watched-list"
         itemLayout="vertical"

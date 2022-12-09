@@ -1,7 +1,5 @@
 import { Avatar, Button, List } from "antd";
 import { useState, useEffect } from "react";
-import AlertMovieWatchStatusUpdated from "./AlertMovieUpdated";
-import AlertMovieWatchStatusDeleted from "./AlertMovieDeleted";
 
 export default function ToWatchList({
   user,
@@ -68,18 +66,6 @@ export default function ToWatchList({
 
   return (
     <>
-      {/* {showAlertUpdated && (
-        <AlertMovieWatchStatusUpdated
-          showAlertUpdated={showAlertUpdated}
-          setShowAlertUpdated={setShowAlertUpdated}
-        />
-      )}
-      {showAlertDeleted && (
-        <AlertMovieWatchStatusDeleted
-          showAlertDeleted={showAlertDeleted}
-          setShowAlertDeleted={setShowAlertDeleted}
-        />
-      )} */}
       <List
         className="towatch-list"
         itemLayout="vertical"
@@ -88,7 +74,7 @@ export default function ToWatchList({
         dataSource={toWatchListResults}
         renderItem={(item) => (
           <List.Item
-            className="to-watch-title"
+            className="to-watch-items"
             actions={[
               <Button
                 type="primary"
