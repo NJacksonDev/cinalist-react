@@ -15,7 +15,7 @@ export default function InProgressList({
   const [inProgressListResults, setInProgressListResults] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5002/usersavedmovies/inprogress`)
+    fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies/inprogress`)
       .then((results) => results.json())
       .then((data) => {
         setInProgressListResults(data);
@@ -27,7 +27,7 @@ export default function InProgressList({
   // https://practice-cloud-api-nj.web.app/usersavedmovies/inprogress
 
   const handleClickChangeMovieStatusToWatched = (item_id) => {
-    fetch(`http://localhost:5002/usersavedmovies/inprogress`, {
+    fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies/inprogress`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),
@@ -40,7 +40,7 @@ export default function InProgressList({
   };
 
   const handleClickChangeMovieStatusToDeleted = (item_id) => {
-    fetch(`http://localhost:5002/usersavedmovies`, {
+    fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),

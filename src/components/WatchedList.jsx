@@ -13,7 +13,7 @@ export default function WatchedList({
   const [watchedListResults, setWatchedListResults] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5002/usersavedmovies/watched`)
+    fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies/watched`)
       .then((results) => results.json())
       .then((data) => setWatchedListResults(data))
       .catch(alert);
@@ -23,7 +23,7 @@ export default function WatchedList({
   // https://practice-cloud-api-nj.web.app/usersavedmovies/watched
 
   const handleClickChangeMovieStatusToDeleted = (item_id) => {
-    fetch(`http://localhost:5002/usersavedmovies`, {
+    fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: item_id, uid: user.uid }),

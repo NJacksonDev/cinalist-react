@@ -17,7 +17,7 @@ export default function SearchBar({
       setSearchResults(null);
       return;
     }
-    fetch(`http://localhost:5002/movies?term=${value}`)
+    fetch(`${process.env.REACT_APP_ENDPOINT}/movies?term=${value}`)
       .then((results) => results.json())
       .then((data) => setSearchResults(data))
       .catch(alert);

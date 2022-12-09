@@ -10,7 +10,7 @@ export default function SearchList({
   setShowAlertAdded,
 }) {
   const handleAddMovie = (item, status) => {
-    fetch(`http://localhost:5002/usersavedmovies`, {
+    fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
