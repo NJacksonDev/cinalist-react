@@ -5,23 +5,16 @@ export default function AlertMovieWatchStatusAdded({
   setShowAlertAdded,
 }) {
   return (
-    <Space
-      direction="vertical"
-      style={{
-        width: "100%",
+    <Alert
+      className="alert-movie"
+      message="Success!"
+      description="This movie has been added to your list."
+      type="success"
+      showIcon
+      closable
+      onClose={() => {
+        setShowAlertAdded(!showAlertAdded);
       }}
-    >
-      <Alert
-        className="alert-movie-added"
-        message="Success!"
-        description="This movie has been added to your list."
-        type="success"
-        showIcon
-        closable
-        onClose={() => {
-          setShowAlertAdded(!showAlertAdded);
-        }}
-      />
-    </Space>
+    />
   );
 }

@@ -54,7 +54,7 @@ export default function InProgressList({
 
   return (
     <>
-      <div>
+      {/* <div>
         {showAlertUpdated && (
           <AlertMovieWatchStatusUpdated
             showAlertUpdated={showAlertUpdated}
@@ -67,8 +67,7 @@ export default function InProgressList({
           showAlertDeleted={showAlertDeleted}
           setShowAlertDeleted={setShowAlertDeleted}
         />
-      )}
-      <br />
+      )} */}
       <List
         className="inprogress-list"
         itemLayout="vertical"

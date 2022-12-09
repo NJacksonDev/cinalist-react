@@ -21,9 +21,6 @@ export default function ToWatchList({
       .catch(alert);
   }, [showAlertUpdated, isUpdated, showAlertDeleted]);
 
-  // http://localhost:5002/usersavedmovies/towatch
-  // https://practice-cloud-api-nj.web.app/usersavedmovies/towatch
-
   const handleClickChangeMovieStatusToInProgress = (item_id) => {
     fetch(
       `${process.env.REACT_APP_ENDPOINT}/usersavedmovies/towatch/movetoinprogress`,
@@ -71,21 +68,18 @@ export default function ToWatchList({
 
   return (
     <>
-      <div>
-        {showAlertUpdated && (
-          <AlertMovieWatchStatusUpdated
-            showAlertUpdated={showAlertUpdated}
-            setShowAlertUpdated={setShowAlertUpdated}
-          />
-        )}
-      </div>
+      {/* {showAlertUpdated && (
+        <AlertMovieWatchStatusUpdated
+          showAlertUpdated={showAlertUpdated}
+          setShowAlertUpdated={setShowAlertUpdated}
+        />
+      )}
       {showAlertDeleted && (
         <AlertMovieWatchStatusDeleted
           showAlertDeleted={showAlertDeleted}
           setShowAlertDeleted={setShowAlertDeleted}
         />
-      )}
-      <br />
+      )} */}
       <List
         className="towatch-list"
         itemLayout="vertical"

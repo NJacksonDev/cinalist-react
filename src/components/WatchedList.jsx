@@ -19,9 +19,6 @@ export default function WatchedList({
       .catch(alert);
   }, [showAlertUpdated, isUpdated, showAlertDeleted]);
 
-  // http://localhost:5002/usersavedmovies/watched
-  // https://practice-cloud-api-nj.web.app/usersavedmovies/watched
-
   const handleClickChangeMovieStatusToDeleted = (item_id) => {
     fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies`, {
       method: "PATCH",
@@ -37,12 +34,12 @@ export default function WatchedList({
 
   return (
     <>
-      {showAlertDeleted && (
+      {/* {showAlertDeleted && (
         <AlertMovieWatchStatusDeleted
           showAlertDeleted={showAlertDeleted}
           setShowAlertDeleted={setShowAlertDeleted}
         />
-      )}
+      )} */}
       <List
         className="watched-list"
         itemLayout="vertical"

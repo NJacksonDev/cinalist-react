@@ -10,6 +10,8 @@ import Instructions from "./components/Instructions";
 import Header from "./components/Header";
 import GoogleAvatar from "./components/GoogleAvatar";
 import Logout from "./components/Logout";
+import AlertMovieWatchStatusDeleted from "./components/AlertMovieDeleted";
+import AlertMovieWatchStatusUpdated from "./components/AlertMovieUpdated";
 
 export default function App() {
   const [user, setUser] = useState();
@@ -19,6 +21,18 @@ export default function App() {
   const [showAlertAdded, setShowAlertAdded] = useState(false);
   return (
     <main className="main-flex-container">
+      {showAlertUpdated && (
+        <AlertMovieWatchStatusUpdated
+          showAlertUpdated={showAlertUpdated}
+          setShowAlertUpdated={setShowAlertUpdated}
+        />
+      )}
+      {showAlertDeleted && (
+        <AlertMovieWatchStatusDeleted
+          showAlertDeleted={showAlertDeleted}
+          setShowAlertDeleted={setShowAlertDeleted}
+        />
+      )}
       <div>
         {!user ? (
           <>

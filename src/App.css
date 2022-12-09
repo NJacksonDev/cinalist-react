@@ -143,27 +143,7 @@ footer {
   text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
 }
 
-.alert-movie-updated {
-  position: fixed;
-  top: 0;
-  left: 40%;
-  z-index: 1;
-  font-family: "Orbitron", courier, sans-serif;
-  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
-  font-size: 15px;
-}
-
-.alert-movie-added {
-  position: fixed;
-  top: 0;
-  left: 40%;
-  z-index: 1;
-  font-family: "Orbitron", courier, sans-serif;
-  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
-  font-size: 15px;
-}
-
-.alert-movie-deleted {
+.alert-movie {
   position: fixed;
   top: 0;
   left: 40%;
