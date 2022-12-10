@@ -45,6 +45,7 @@ export default function WatchedList({
               <Button
                 type="primary"
                 size="small"
+                className="list-button"
                 style={{ marginLeft: "150px" }}
                 onClick={() => handleClickChangeMovieStatusToDeleted(item._id)}
               >

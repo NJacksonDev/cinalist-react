@@ -64,6 +64,7 @@ export default function InProgressList({
               <Button
                 type="primary"
                 size="small"
+                className="list-button"
                 onClick={() => handleClickChangeMovieStatusToWatched(item._id)}
               >
                 Add to: Watched
@@ -71,6 +72,7 @@ export default function InProgressList({
               <Button
                 type="primary"
                 size="small"
+                className="list-button"
                 onClick={() => handleClickChangeMovieStatusToDeleted(item._id)}
               >
                 Remove Movie

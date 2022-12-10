@@ -79,6 +79,7 @@ export default function ToWatchList({
               <Button
                 type="primary"
                 size="small"
+                className="list-button"
                 onClick={() =>
                   handleClickChangeMovieStatusToInProgress(item._id)
                 }
@@ -88,6 +89,7 @@ export default function ToWatchList({
               <Button
                 type="primary"
                 size="small"
+                className="list-button"
                 onClick={() => handleClickChangeMovieStatusToWatched(item._id)}
               >
                 Add to: Watched
@@ -95,6 +97,7 @@ export default function ToWatchList({
               <Button
                 type="primary"
                 size="small"
+                className="list-button"
                 style={{ marginTop: "10px" }}
                 onClick={() => handleClickChangeMovieStatusToDeleted(item._id)}
               >
