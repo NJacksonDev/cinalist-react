@@ -9,7 +9,7 @@ export default function SearchList({
   showAlertAdded,
   setShowAlertAdded,
 }) {
-  const handleAddMovie = (item, status) => {
+  const handleAddMovie = (item, status, uid) => {
     fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies`, {
       method: "POST",
       headers: {
@@ -44,7 +44,7 @@ export default function SearchList({
               <Button
                 type="primary"
                 size="small"
-                onClick={() => handleAddMovie(item, "to watch")}
+                onClick={() => handleAddMovie(item, "to watch", user.uid)}
               >
                 Add to: To Watch
               </Button>,
