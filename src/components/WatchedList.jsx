@@ -38,7 +38,7 @@ export default function WatchedList({
       <List
         className="watched-list"
         itemLayout="vertical"
-        header={<h2>Watched List</h2>}
+        header={<h2 style={{ marginLeft: "30px" }}>Watched List</h2>}
         dataSource={watchedListResults}
         renderItem={(item) => (
           <List.Item
@@ -56,7 +56,7 @@ export default function WatchedList({
             ]}
           >
             <List.Item.Meta
-              className="watched-list-item-meta"
+              className="list-meta-items"
               avatar={<Avatar src={item.poster} size={110} shape="square" />}
               title={<h3>{item.title}</h3>}
               description={item.year}

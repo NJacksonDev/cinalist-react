@@ -72,7 +72,7 @@ export default function ToWatchList({
         className="towatch-list"
         itemLayout="vertical"
         bordered
-        header={<h2>To Watch List</h2>}
+        header={<h2 style={{ marginLeft: "30px" }}>To Watch List</h2>}
         dataSource={toWatchListResults}
         renderItem={(item) => (
           <List.Item
@@ -108,7 +108,7 @@ export default function ToWatchList({
             ]}
           >
             <List.Item.Meta
-              className="to-watch-list-meta-items"
+              className="list-meta-items"
               avatar={<Avatar src={item.poster} size={110} shape="square" />}
               title={<h3>{item.title}</h3>}
               description={item.year}

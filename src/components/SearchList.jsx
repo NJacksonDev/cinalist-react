@@ -44,6 +44,7 @@ export default function SearchList({
               <Button
                 type="primary"
                 size="small"
+                className="list-button"
                 onClick={() => handleAddMovie(item, "to watch")}
               >
                 Add to: To Watch
@@ -51,6 +52,7 @@ export default function SearchList({
               <Button
                 type="primary"
                 size="small"
+                className="list-button"
                 onClick={() => handleAddMovie(item, "in progress")}
               >
                 Add to: In Progress
@@ -58,6 +60,7 @@ export default function SearchList({
               <Button
                 type="primary"
                 size="small"
+                className="list-button"
                 onClick={() => handleAddMovie(item, "watched")}
               >
                 Add to: Watched

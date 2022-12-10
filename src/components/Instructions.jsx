@@ -1,6 +1,6 @@
 export default function Instructions() {
   return (
-    <div>
+    <div className="instructions">
       <h4 className="instructions-title">
         Build your own movie collection. Fast.
       </h4>

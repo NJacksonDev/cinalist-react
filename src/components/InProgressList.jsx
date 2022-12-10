@@ -55,7 +55,7 @@ export default function InProgressList({
         className="inprogress-list"
         itemLayout="vertical"
         bordered
-        header={<h2>In Progress List</h2>}
+        header={<h2 style={{ marginLeft: "30px" }}>In Progress List</h2>}
         dataSource={inProgressListResults}
         renderItem={(item) => (
           <List.Item
@@ -79,6 +79,7 @@ export default function InProgressList({
             ]}
           >
             <List.Item.Meta
+              className="list-meta-items"
               avatar={<Avatar src={item.poster} size={110} shape="square" />}
               title={<h3>{item.title}</h3>}
               description={item.year}
