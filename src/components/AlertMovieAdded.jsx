@@ -1,4 +1,4 @@
-import { Alert, Space } from "antd";
+import { Alert } from "antd";
 
 export default function AlertMovieWatchStatusAdded({
   showAlertAdded,

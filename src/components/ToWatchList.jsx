@@ -95,6 +95,7 @@ export default function ToWatchList({
               <Button
                 type="primary"
                 size="small"
+                style={{ marginTop: "10px" }}
                 onClick={() => handleClickChangeMovieStatusToDeleted(item._id)}
               >
                 Remove Movie
