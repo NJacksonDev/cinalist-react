@@ -13,7 +13,9 @@ export default function ToWatchList({
   const [toWatchListResults, setToWatchListResults] = useState();
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies/towatch`)
+    fetch(
+      `${process.env.REACT_APP_ENDPOINT}/usersavedmovies/towatch/${user.uid}`
+    )
       .then((results) => results.json())
       .then((data) => setToWatchListResults(data))
       .catch(alert);

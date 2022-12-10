@@ -12,7 +12,9 @@ export default function WatchedList({
   const [watchedListResults, setWatchedListResults] = useState();
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies/watched`)
+    fetch(
+      `${process.env.REACT_APP_ENDPOINT}/usersavedmovies/watched/${user.uid}`
+    )
       .then((results) => results.json())
       .then((data) => setWatchedListResults(data))
       .catch(alert);

@@ -13,16 +13,15 @@ export default function InProgressList({
   const [inProgressListResults, setInProgressListResults] = useState();
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies/inprogress`)
+    fetch(
+      `${process.env.REACT_APP_ENDPOINT}/usersavedmovies/inprogress/${user.uid}`
+    )
       .then((results) => results.json())
       .then((data) => {
         setInProgressListResults(data);
       })
       .catch(alert);
   }, [showAlertUpdated, isUpdated, showAlertDeleted]);
-
-  // http://localhost:5002/usersavedmovies/inprogress
-  // https://practice-cloud-api-nj.web.app/usersavedmovies/inprogress
 
   const handleClickChangeMovieStatusToWatched = (item_id) => {
     fetch(`${process.env.REACT_APP_ENDPOINT}/usersavedmovies/inprogress`, {
