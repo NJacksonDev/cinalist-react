@@ -59,7 +59,7 @@ export default function WatchedList({
               className="list-meta-items"
               avatar={<Avatar src={item.poster} size={110} shape="square" />}
               title={<h3>{item.title}</h3>}
-              description={item.year}
+              description={<h5>{item.year}</h5>}
             />
           </List.Item>
         )}
