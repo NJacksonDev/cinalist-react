@@ -20,11 +20,11 @@ Technologies used: React, Node.js, Express, MongoDB.
 
 ## Prerequisites
 
-### Install Node JS
-Refer to https://nodejs.org/en/ to install nodejs
+### Install Node.js
+Refer to https://nodejs.org/en/ to install Node.js.
 
-### Install create-react-app.
-Install create-react-app npm package globally. This will help to easily run the project and also build the source files easily. Use the following command to install create-react-app.
+### Install create-react-app
+Install create-react-app npm package globally. This will help to easily run the project. Use the following command to install create-react-app:
 
 ```bash
 npm install -g create-react-app
@@ -32,7 +32,7 @@ npm install -g create-react-app
 
 ## Installation and Setup
 
-Clone the project into onto your machine.
+Clone the project onto your machine.
 
 Install all npm packages. Go into the project folder and type the following command to install all npm packages:
 
@@ -46,4 +46,4 @@ Use the following command to run the application locally:
 npm start
 ```
 
-To see the app running, go to **localhost:3000** on your browser.
+To see the app running, go to **localhost:3000** using your web browser.
