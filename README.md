@@ -16,7 +16,7 @@ Live version: `cinalist.com`
 
 ## Installation and Setup
 
-Clone this repository. You will need node and npm installed globally on your machine.
+Clone this repository and the cinalist-api repo. You will need react, node and npm installed globally on your machine.
 
 Installation:
 
