@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <footer>&copy; 2022 Nick Jackson.</footer>;
+  return <footer>&copy; 2023 Nick Jackson. All rights reserved.</footer>;
 }
