@@ -6,7 +6,7 @@ Technologies used: React, Node.js, Express, MongoDB.
 
 ## Live Version URL: 
 
-`[cinalist.com](https://cinalist.com/)`
+`https://cinalist.com/`
 
 ## Screenshots of Application
 
@@ -16,8 +16,6 @@ Technologies used: React, Node.js, Express, MongoDB.
 
 ![Screenshot 2022-12-30 at 2 34 32 PM](https://user-images.githubusercontent.com/12886956/210106260-dc0ff71c-12fe-4974-a89b-2e049b753240.png)
 
-
-## Prerequisites
 
 ## Installation and Setup
 
