@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LandingPage from "./components/LandingPage";
 import SearchBar from "./components/SearchBar";
 import ToWatchList from "./components/ToWatchList";
@@ -19,6 +19,12 @@ export default function App() {
   const [showAlertDeleted, setShowAlertDeleted] = useState(false);
   const [showAlertUpdated, setShowAlertUpdated] = useState(false);
   const [showAlertAdded, setShowAlertAdded] = useState(false);
+  useEffect(() => {
+    const _user = JSON.parse(localStorage.getItem("user"));
+    if (_user !== "") {
+      setUser(_user);
+    }
+  }, []);
   return (
     <main className="main-flex-container">
       {showAlertUpdated && (
@@ -35,63 +41,59 @@ export default function App() {
       )}
       <div>
         {!user ? (
-          <>
-            <LandingPage setUser={setUser} />
-          </>
+          <LandingPage setUser={setUser} />
         ) : (
-          <>
-            <div className="main-flex-container">
-              <Header />
-              <GoogleAvatar user={user} />
-              <Logout setUser={setUser} />
-              <br />
-              <Instructions />
-              <br />
-              <SearchBar
+          <div className="main-flex-container">
+            <Header />
+            <GoogleAvatar user={user} />
+            <Logout setUser={setUser} />
+            <br />
+            <Instructions />
+            <br />
+            <SearchBar
+              user={user}
+              setIsUpdated={setIsUpdated}
+              isUpdated={isUpdated}
+              setShowAlertAdded={setShowAlertAdded}
+              showAlertAdded={showAlertAdded}
+            />
+            <br />
+            <br />
+            <br />
+            <div className="watch-lists">
+              <ToWatchList
                 user={user}
-                setIsUpdated={setIsUpdated}
                 isUpdated={isUpdated}
-                setShowAlertAdded={setShowAlertAdded}
-                showAlertAdded={showAlertAdded}
+                setIsUpdated={setIsUpdated}
+                setShowAlertUpdated={setShowAlertUpdated}
+                showAlertUpdated={showAlertUpdated}
+                showAlertDeleted={showAlertDeleted}
+                setShowAlertDeleted={setShowAlertDeleted}
               />
               <br />
+              <InProgressList
+                user={user}
+                isUpdated={isUpdated}
+                setIsUpdated={setIsUpdated}
+                setShowAlertUpdated={setShowAlertUpdated}
+                showAlertUpdated={showAlertUpdated}
+                showAlertDeleted={showAlertDeleted}
+                setShowAlertDeleted={setShowAlertDeleted}
+              />
               <br />
-              <br />
-              <div className="watch-lists">
-                <ToWatchList
-                  user={user}
-                  isUpdated={isUpdated}
-                  setIsUpdated={setIsUpdated}
-                  setShowAlertUpdated={setShowAlertUpdated}
-                  showAlertUpdated={showAlertUpdated}
-                  showAlertDeleted={showAlertDeleted}
-                  setShowAlertDeleted={setShowAlertDeleted}
-                />
-                <br />
-                <InProgressList
-                  user={user}
-                  isUpdated={isUpdated}
-                  setIsUpdated={setIsUpdated}
-                  setShowAlertUpdated={setShowAlertUpdated}
-                  showAlertUpdated={showAlertUpdated}
-                  showAlertDeleted={showAlertDeleted}
-                  setShowAlertDeleted={setShowAlertDeleted}
-                />
-                <br />
-                <WatchedList
-                  user={user}
-                  isUpdated={isUpdated}
-                  setIsUpdated={setIsUpdated}
-                  showAlertDeleted={showAlertDeleted}
-                  setShowAlertDeleted={setShowAlertDeleted}
-                  showAlertUpdated={showAlertUpdated}
-                  setShowAlertUpdated={setShowAlertUpdated}
-                />
-              </div>
-              <br />
-              <Footer />
+              <WatchedList
+                user={user}
+                isUpdated={isUpdated}
+                setIsUpdated={setIsUpdated}
+                showAlertDeleted={showAlertDeleted}
+                setShowAlertDeleted={setShowAlertDeleted}
+                showAlertUpdated={showAlertUpdated}
+                setShowAlertUpdated={setShowAlertUpdated}
+              />
             </div>
-          </>
+            <br />
+            <Footer />
+          </div>
         )}
       </div>
     </main>
