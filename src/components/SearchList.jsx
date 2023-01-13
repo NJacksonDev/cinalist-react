@@ -1,5 +1,6 @@
 import { Avatar, Button, List } from "antd";
 import AlertMovieWatchStatusAdded from "./AlertMovieAdded";
+import "./SearchList.css";
 
 export default function SearchList({
   searchResults,
