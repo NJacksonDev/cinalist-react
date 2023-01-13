@@ -18,38 +18,6 @@
   font-size: calc(10px + 2vmin);
 }
 
-header {
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 30px;
-  margin-bottom: 20px;
-  padding: 20px;
-  color: #fcee09;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 40px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  border-radius: 10px;
-  box-shadow: 0 0px 20px magenta;
-}
-
-.header-text {
-  display: flex;
-  justify-content: flex-start;
-  border: solid 4px green;
-  margin-left: 300px;
-}
-
-.avatar {
-  display: flex;
-  margin-top: 5px;
-  padding: 10px;
-  color: #fcee09;
-  justify-content: flex-end;
-}
-
 .search-text {
   border: 4px solid #fcee09;
   margin: 20px;
@@ -60,55 +28,6 @@ header {
   width: 80vw;
   margin: 40px;
   padding: 40px;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-  margin-top: 50px;
-  padding: 20px;
-  font-size: small;
-  color: #fcee09;
-}
-
-.towatch-list {
-  border: 4px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  align-items: center;
-  font-family: "Orbitron", courier, sans-serif;
-  color: #fcee09;
-  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
-  font-size: calc(2px + 2vmin);
-  width: 33.3%;
-}
-
-.inprogress-list {
-  border: 4px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  align-items: center;
-  font-family: "Orbitron", courier, sans-serif;
-  color: #fcee09;
-  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
-  font-size: calc(2px + 2vmin);
-  width: 33.3%;
-}
-
-.watched-list {
-  border: 4px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  align-items: center;
-  font-family: "Orbitron", courier, sans-serif;
-  color: #fcee09;
-  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
-  font-size: calc(2px + 2vmin);
-  width: 33.3%;
 }
 
 .watch-lists {
@@ -123,41 +42,6 @@ footer {
   color: #fcee09;
 }
 
-.instructions-title {
-  display: flex;
-  justify-content: center;
-  color: black;
-}
-
-.instructions-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  line-height: 50px;
-  color: black;
-}
-
-.login-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-family: "Orbitron", courier, sans-serif;
-  color: #fcee09;
-  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
-}
-
-.logout-button {
-  display: flex;
-  align-self: flex-end;
-  font-family: "Orbitron", courier, sans-serif;
-  color: #fcee09;
-  background: black;
-  border-color: magenta;
-  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
-  margin-right: 10px;
-}
-
 .alert-movie {
   position: fixed;
   top: 0;
@@ -168,33 +52,6 @@ footer {
   font-size: 15px;
 }
 
-.landing-page-container {
-  background-image: url("./components/component-pics/cyber-city.jpeg");
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-attachment: fixed;
-  backdrop-filter: blur(5px);
-}
-
-.landing-page-text-container {
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #fcee09;
-  font-size: calc(25px + 2vmin);
-  text-shadow: 0 0 9px black;
-  width: 65%;
-  height: 65%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  backdrop-filter: blur(10px);
-}
-
 .to-watch-title {
   font-family: "Orbitron", courier, sans-serif;
   text-shadow: 0 0 5px black;
@@ -203,7 +60,6 @@ footer {
 
 .list-meta-items {
   font-family: "Orbitron", courier, sans-serif;
-  /* text-shadow: 0 0 1px magenta; */
   color: #fcee09;
   font-size: calc(2px + 2vmin);
   display: flex;
@@ -218,22 +74,6 @@ footer {
   color: #fcee09;
   text-shadow: 0 0 20px rgba(157, 208, 154, 0.3);
   background: black;
-}
-
-.instructions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 30px;
-  margin-bottom: 40px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 40px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  border-radius: 10px;
-  box-shadow: 0 0px 20px black;
-  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
-  font-size: calc(5px + 2vmin);
 }
 
 h3 {

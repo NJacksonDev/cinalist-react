@@ -1,0 +1,26 @@
+.landing-page-container {
+  background-image: url("../components/component-pics/cyber-city.jpeg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  backdrop-filter: blur(5px);
+}
+
+.landing-page-text-container {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fcee09;
+  font-size: calc(25px + 2vmin);
+  text-shadow: 0 0 9px black;
+  width: 65%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+}

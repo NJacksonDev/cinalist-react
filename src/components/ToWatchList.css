@@ -1,0 +1,12 @@
+.towatch-list {
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  font-family: "Orbitron", courier, sans-serif;
+  color: #fcee09;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  font-size: calc(2px + 2vmin);
+  width: 33.3%;
+}

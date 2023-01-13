@@ -1,5 +1,6 @@
 import { Avatar, Button, List } from "antd";
 import { useState, useEffect } from "react";
+import "./InProgressList.css";
 
 export default function InProgressList({
   user,

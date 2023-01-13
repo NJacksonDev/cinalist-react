@@ -1,4 +1,5 @@
 import { Button } from "antd";
+import "./Logout.css";
 
 export default function Logout({ setUser }) {
   return (

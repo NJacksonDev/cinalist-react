@@ -1,4 +1,5 @@
 import { Avatar } from "antd";
+import "./GoogleAvatar.css";
 
 export default function GoogleAvatar({ user }) {
   return (

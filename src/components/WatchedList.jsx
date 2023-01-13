@@ -1,5 +1,6 @@
 import { Avatar, List, Button } from "antd";
 import { useState, useEffect } from "react";
+import "./WatchedList.css";
 
 export default function WatchedList({
   user,

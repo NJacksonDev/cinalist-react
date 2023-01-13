@@ -1,0 +1,10 @@
+.logout-button {
+  display: flex;
+  align-self: flex-end;
+  font-family: "Orbitron", courier, sans-serif;
+  color: #fcee09;
+  background: black;
+  border-color: magenta;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  margin-right: 10px;
+}

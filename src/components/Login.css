@@ -1,0 +1,9 @@
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Orbitron", courier, sans-serif;
+  color: #fcee09;
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+}

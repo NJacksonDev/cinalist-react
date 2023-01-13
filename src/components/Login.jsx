@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app"; //firebase library
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { Button } from "antd";
+import "./Login.css";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBzt7t8P2NLYcOBvAMC7tlJNGGoL9LwQtM",

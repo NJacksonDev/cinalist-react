@@ -1,0 +1,7 @@
+.avatar {
+  display: flex;
+  margin-top: 5px;
+  padding: 10px;
+  color: #fcee09;
+  justify-content: flex-end;
+}

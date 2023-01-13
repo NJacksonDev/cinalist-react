@@ -1,4 +1,5 @@
 import Login from "./Login";
+import "./LandingPage.css";
 
 export default function LandingPage({ setUser }) {
   return (
