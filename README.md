@@ -4,10 +4,6 @@ CinaList is a full-stack web application used for organizing movies using separa
 
 Technologies used: React, Node.js, Express, MongoDB.
 
-## Live Version URL: 
-
-`https://cinalist.com/`
-
 ## Screenshots of Application
 
 
